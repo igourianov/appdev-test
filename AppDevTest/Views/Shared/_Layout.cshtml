@@ -15,10 +15,11 @@
 				new KeyValuePair<string, string>("Home", "Home"),
 				new KeyValuePair<string, string>("MvcHttp", "MVC / HTTP"),
 				new KeyValuePair<string, string>("Javascript", "Javascript"),
+				new KeyValuePair<string, string>("Sql", "SQL"),
 			};
 		}
 		@foreach (var link in links) { 
-			@Html.ActionLink(link.Value, "Index", link.Key, null, new { @class = ViewContext.RouteData.Values["controller"].ToString() == link.Key ? "selected" : null })
+			@Html.ActionLink(link.Value, "Index", link.Key, null, new { @class = ViewContext.RouteData.Values["controller"].ToString().ToLower() == link.Key.ToLower() ? "selected" : null })
 		}
 	</nav>
 	<article>

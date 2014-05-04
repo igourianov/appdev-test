@@ -129,15 +129,22 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JavascriptController.cs" />
     <Compile Include="Controllers\MvcHttpController.cs" />
+    <Compile Include="Controllers\SqlController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Northwind.mdf" />
+    <Content Include="App_Data\northwind.sql" />
+    <Content Include="App_Data\Northwind_log.ldf">
+      <DependentUpon>Northwind.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\carbon_14.png" />
     <Content Include="Content\ceridian-logo.gif" />
     <Content Include="Content\normalize.css" />
+    <Content Include="Content\sql.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\layout.css" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
@@ -160,9 +167,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\MvcHttp\Index.cshtml" />
     <Content Include="Views\Javascript\Index.cshtml" />
+    <Content Include="Views\Sql\Index.cshtml" />
+    <Content Include="Views\Sql\Table.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

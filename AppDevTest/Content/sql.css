@@ -1,0 +1,25 @@
+﻿
+table.sql-result {
+	margin: 15px 10px;
+}
+
+table.sql-result thead td {
+	background-color: #0070c4;
+	color: #fff;
+	padding: 5px 10px;
+	text-align: center;
+	border-right: 1px solid #fff;
+}
+
+table.sql-result tbody td {
+	padding: 0 5px;
+	border-right: 1px solid #ddd;
+}
+
+table.sql-result tbody td:last-child {
+	border-right: 0;
+}
+
+table.sql-result tbody tr:nth-of-type(2n+1) {
+	background-color: #eee;
+}
