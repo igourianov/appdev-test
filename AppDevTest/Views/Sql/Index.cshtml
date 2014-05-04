@@ -1,0 +1,35 @@
+﻿@{
+	ViewBag.Title = "SQL";
+}
+
+<p>Implement SQL queries to given specification</p>
+
+<ul>
+	<li>See Northwind DB attached to this project for schema.</li>
+	<li>Write SELECT statements that return data matching requirements for each query.</li>
+</ul>
+
+
+<hr/>
+<p>Select all employees ordered by full name. Columns: Employee ID and Full Name.</p>
+@Html.Action("AllEmployees")
+
+<hr />
+<p>Select all Orders shipped to London for each customer. Columns: Company name, Order ID, Order date.</p>
+@Html.Action("OrdersShippedToLondon")
+
+<hr />
+<p>Select most recent orders for each customer. Columns: Company name, Order Date</p>
+@Html.Action("RecentOrders")
+
+<hr />
+<p>Select all customers that have ever ordered Chocolade. Columns: Company name, Total quantity ordered, Total dollars spent</p>
+@Html.Action("SweetToothCustomers")
+
+
+
+
+
+
+
+

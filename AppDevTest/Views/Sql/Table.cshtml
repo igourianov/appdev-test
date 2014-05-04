@@ -1,0 +1,34 @@
+﻿@using System.Data
+@model DataTable
+
+@{
+	Layout = null;
+}
+
+@if (Model == null)
+{
+	<p>Edit <code>SqlController.@(ViewContext.RouteData.Values["action"])</code> action to provide SQL statement</p>
+}
+else
+{
+	<table class="sql-result">
+		<thead>
+			<tr>
+				@foreach (DataColumn col in Model.Columns)
+				{
+					<td>@col.ColumnName</td>
+				}
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (DataRow row in Model.Rows)
+			{
+				<tr>
+					@for (var i = 0; i < Model.Columns.Count; i++) { 
+						<td>@row[i]</td>
+					}
+				</tr>
+			}
+		</tbody>
+	</table>
+}
