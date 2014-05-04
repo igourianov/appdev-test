@@ -150,9 +150,8 @@
     <Content Include="Content\ceridian-logo.gif" />
     <Content Include="Content\form.css" />
     <Content Include="Content\normalize.css" />
-    <Content Include="Content\sql.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\layout.css" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />

@@ -4,22 +4,7 @@
 
 <h2>Implement <code>BasinCalculator</code> class</h2>
 
-<style>
-	svg {
-		float: left;
-	}
-
-	svg .blue-bar {
-		fill: steelblue;
-	}
-
-	svg .label {
-		text-anchor: middle;
-		fill: #fff;
-	}
-</style>
-
-<svg height="400" width="400" id="sample-surface"></svg>
+<svg height="400" width="400" class="bar-chart"></svg>
 
 <p>The goal is to implement the method that calculates liquid volume that can be stored on top of a given surface.</p>
 <p>Take following surface <code>[3, 5, 8, 7, 2, 6, 11, 3, 4, 9, 5, 1]</code> represented by a bar char on the left. It has 2 basins. One between <code>8</code> and <code>11</code>, and another between <code>11</code> and <code>9</code>.
@@ -40,17 +25,28 @@
 	<script>
 		$(document).ready(function() {
 
-			renderSurface([3, 5, 8, 7, 2, 6, 11, 3, 4, 9, 5, 1]);
+			renderSurface([{ blue: 3 }, { blue: 5 }, { blue: 8 }, { blue: 7, red: 8 }, { blue: 2, red: 8 }, { blue: 6, red: 8 }, { blue: 11 }, { blue: 3, red: 9 }, { blue: 4, red: 9 }, { blue: 9 }, { blue: 5 }, { blue: 1 }]);
 
 			function renderSurface(surface) {
 				var svgns = "http://www.w3.org/2000/svg";
-				var svg = $("#sample-surface");
+				var svg = $("svg.bar-chart");
 				var x = 0;
 				var maxY = 11;
 				var maxHeight = svg.height();
 
 				for (var i = 0; i < surface.length; i++) {
-					var y = surface[i];
+					if (surface[i].red) {
+						var y = surface[i].red;
+						var height = Math.floor(y * maxHeight / maxY);
+						$(document.createElementNS(svgns, 'rect')).attr({
+							"class": "red-bar",
+							x: x,
+							y: maxHeight - height,
+							width: 30,
+							height: height
+						}).appendTo(svg);
+					}
+					var y = surface[i].blue;
 					var height = Math.floor(y * maxHeight / maxY);
 					$(document.createElementNS(svgns, 'rect')).attr({
 						"class": "blue-bar",
