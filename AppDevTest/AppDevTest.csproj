@@ -127,6 +127,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HtmlCssController.cs" />
     <Compile Include="Controllers\JavascriptController.cs" />
     <Compile Include="Controllers\MvcHttpController.cs" />
     <Compile Include="Controllers\SqlController.cs" />
@@ -143,6 +144,7 @@
     </Content>
     <Content Include="Content\carbon_14.png" />
     <Content Include="Content\ceridian-logo.gif" />
+    <Content Include="Content\form.css" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\sql.css" />
     <Content Include="Global.asax" />
@@ -169,6 +171,7 @@
     <Content Include="Views\Javascript\Index.cshtml" />
     <Content Include="Views\Sql\Index.cshtml" />
     <Content Include="Views\Sql\Table.cshtml" />
+    <Content Include="Views\HtmlCss\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
