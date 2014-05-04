@@ -42,6 +42,7 @@ body > nav > * {
 	border-right: 1px solid #fff;
 	color: #fff;
 	text-decoration: none;
+	transition-duration: 200ms;
 }
 
 body > nav > *:hover {
@@ -49,7 +50,7 @@ body > nav > *:hover {
 }
 
 body > nav > .selected {
-	color: #000;
+	color: #555;
 	background-color: #fff;
 }
 
