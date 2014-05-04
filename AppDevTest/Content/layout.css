@@ -13,17 +13,12 @@ body {
 	background: #fff;
 }
 
-
-header, footer, nav, section {
-	display: block;
-}
-
-body > .header {
+body > header {
 	height: 100px;
 	position: relative;
 }
 
-body > .header::before {
+body > header::before {
 	content: " ";
 	height: 78px;
 	width: 400px;
@@ -33,7 +28,6 @@ body > .header::before {
 	background: url(ceridian-logo.gif) no-repeat;
 }
 
-
 body > nav {
 	margin: 0;
 	list-style: none;
@@ -42,14 +36,23 @@ body > nav {
 }
 
 body > nav > * {
-	padding: 5px 10px;
+	padding: 5px 20px;
 	margin: 0;
 	float: left;
-	border-right: 1px solid #74C7E8;
+	border-right: 1px solid #fff;
 	color: #fff;
 	text-decoration: none;
 }
 
 body > nav > *:hover {
 	background-color: #78C046;
+}
+
+body > nav > .selected {
+	color: #000;
+	background-color: #fff;
+}
+
+body > article {
+	padding: 10px 20px;
 }

@@ -1,21 +1,30 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Ceridian APPDEV Test - @ViewBag.Title</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-	<div class="header"></div>
+	<header></header>
 	<nav>
-		@Html.ActionLink("Question 1", "Index", "Question1")
+		@{
+			var links = new[] {
+				new KeyValuePair<string, string>("Home", "Home"),
+				new KeyValuePair<string, string>("MvcHttp", "MVC / HTTP"),
+				new KeyValuePair<string, string>("Question2", "Question 2"),
+			};
+		}
+		@foreach (var link in links) { 
+			@Html.ActionLink(link.Value, "Index", link.Key, null, new { @class = ViewContext.RouteData.Values["controller"].ToString() == link.Key ? "selected" : null })
+		}
 	</nav>
-	<div class="content">
+	<article>
 		@RenderBody()
-	</div>
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", false)
+	</article>
+	@Scripts.Render("~/bundles/jquery")
+	@RenderSection("scripts", false)
 </body>
 </html>
