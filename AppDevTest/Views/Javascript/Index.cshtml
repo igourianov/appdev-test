@@ -2,12 +2,12 @@
 	ViewBag.Title = "MVC / HTTP";
 }
 
-<p>Sumbit data to the server over HTTP POST, calculate the result and display it.</p>
+<p>Calculate expression on the client-side and display the result.</p>
 
 <ul>
-	<li>Calculation must be done server-side</li>
-	<li>Create whatever models and/or controller actions you need</li>
-	<li>Make sure inputs preserve submitted values after page is reloaded</li>
+	<li>Avoid sending data to the server</li>
+	<li>Calculation must be done using Javascript</li>
+	<li>You can use jQuery</li>
 	<li>Do not worry about validation.</li>
 </ul>
 
@@ -28,3 +28,8 @@
 	<button type="submit">Calculate</button>
 </form>
 
+@section scripts {
+	<script>
+
+	</script>
+}
