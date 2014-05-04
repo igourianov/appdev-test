@@ -1,0 +1,73 @@
+﻿@{
+	ViewBag.Title = "Home";
+}
+
+<h2>Implement <code>BasinCalculator</code> class</h2>
+
+<style>
+	svg {
+		float: left;
+	}
+
+	svg .blue-bar {
+		fill: steelblue;
+	}
+
+	svg .label {
+		text-anchor: middle;
+		fill: #fff;
+	}
+</style>
+
+<svg height="400" width="400" id="sample-surface"></svg>
+
+<p>The goal is to implement the method that calculates liquid volume that can be stored on top of a given surface.</p>
+<p>Take following surface <code>[3, 5, 8, 7, 2, 6, 11, 3, 4, 9, 5, 1]</code> represented by a bar char on the left. It has 2 basins. One between <code>8</code> and <code>11</code>, and another between <code>11</code> and <code>9</code>.
+	<br />First one can store 9 units of liquid, calculated as <code>(8 - 7) + (8 - 2) + (8 - 6) = 9</code>.
+	<br />Second basin can hold 11 units, calculated as <code>(9 - 4) + (9 - 3) = 11</code>.
+	<br />Given the surface definition you need find sum of all basins on that surface.</p>
+
+<ul>
+	<li>Write your implementation in <code>Business/BasinCalculator.cs</code></li>
+	<li>Run and test your code using UnitTests project.</li>
+	<li>We strongly urge you to begin by writing additional unit tests before you begin implementation work. Cover edge cases.</li>
+	<li>Do <strong>not</strong> use Linq. We're expecting plain C# code.</li>
+	<li>If you cannot write a complete solution, lay the groundwork, write comments, show us the general idea you were trying to apply.</li>
+</ul>
+
+
+@section scripts {
+	<script>
+		$(document).ready(function() {
+
+			renderSurface([3, 5, 8, 7, 2, 6, 11, 3, 4, 9, 5, 1]);
+
+			function renderSurface(surface) {
+				var svgns = "http://www.w3.org/2000/svg";
+				var svg = $("#sample-surface");
+				var x = 0;
+				var maxY = 11;
+				var maxHeight = svg.height();
+
+				for (var i = 0; i < surface.length; i++) {
+					var y = surface[i];
+					var height = Math.floor(y * maxHeight / maxY);
+					$(document.createElementNS(svgns, 'rect')).attr({
+						"class": "blue-bar",
+						x: x,
+						y: maxHeight - height,
+						width: 30,
+						height: height
+					}).appendTo(svg);
+					$(document.createElementNS(svgns, 'text')).attr({
+						"class": "label",
+						x: x,
+						dx: 15,
+						y: maxHeight - height + 20
+					}).text(y).appendTo(svg);
+					x += 30;
+				}
+			}
+		});
+	</script>
+}

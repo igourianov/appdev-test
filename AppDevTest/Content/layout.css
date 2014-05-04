@@ -56,4 +56,10 @@ body > nav > .selected {
 
 body > article {
 	padding: 10px 20px;
+	overflow: auto;
+}
+
+code {
+	font-size:80%;
+	color:darkblue;
 }
