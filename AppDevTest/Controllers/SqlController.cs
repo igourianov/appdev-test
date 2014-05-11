@@ -18,7 +18,11 @@ namespace AppDevTest.Controllers
 
 		public ActionResult AllEmployees()
 		{
-			return TableView("select EmployeeID as ID, FirstName + ' ' + LastName as Name from Employees order by FirstName + ' ' + LastName");
+			// Answer provided as a sample
+			return TableView(@"
+SELECT EmployeeID AS ID, FirstName + ' ' + LastName AS Name
+FROM Employees
+ORDER BY FirstName + ' ' + LastName");
 		}
 
 		public ActionResult OrdersShippedToLondon()
