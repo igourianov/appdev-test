@@ -3,6 +3,9 @@
 	color: steelblue;
 }
 
+select {
+	padding: 1px;
+}
 
 table.sql-result {
 	margin: 15px 10px;
