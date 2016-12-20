@@ -16,7 +16,7 @@ namespace UnitTests
 		}
 
 		[TestMethod]
-		public void TestMethod1()
+		public void sample_test()
 		{
 			Assert.AreEqual(4, provider.FindFirst("abbacbda"));
 		}

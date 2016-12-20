@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace AppDevTest.Controllers
 {
-	public class JavascriptController : Controller
+	public class FormDesignController : Controller
 	{
 		public ActionResult Index()
 		{

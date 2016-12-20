@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -131,10 +132,10 @@
     <Compile Include="Controllers\CSharpAdvController.cs" />
     <Compile Include="Controllers\CSharpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\HtmlCssController.cs" />
-    <Compile Include="Controllers\JavascriptController.cs" />
-    <Compile Include="Controllers\MvcHttpController.cs" />
-    <Compile Include="Controllers\SqlController.cs" />
+    <Compile Include="Controllers\FormDesignController.cs" />
+    <Compile Include="Controllers\JavascriptCalculatorController.cs" />
+    <Compile Include="Controllers\MvcCalculatorController.cs" />
+    <Compile Include="Controllers\SqlQueriesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -171,11 +172,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-2.1.0.min.map" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\MvcHttp\Index.cshtml" />
-    <Content Include="Views\Javascript\Index.cshtml" />
-    <Content Include="Views\Sql\Index.cshtml" />
-    <Content Include="Views\Sql\Table.cshtml" />
-    <Content Include="Views\HtmlCss\Index.cshtml" />
+    <Content Include="Views\MvcCalculator\Index.cshtml" />
+    <Content Include="Views\JavascriptCalculator\Index.cshtml" />
+    <Content Include="Views\SqlQueries\Index.cshtml" />
+    <Content Include="Views\SqlQueries\Table.cshtml" />
+    <Content Include="Views\FormDesign\Index.cshtml" />
     <Content Include="Views\CSharp\Index.cshtml" />
     <Content Include="Views\CSharpAdv\Index.cshtml" />
   </ItemGroup>

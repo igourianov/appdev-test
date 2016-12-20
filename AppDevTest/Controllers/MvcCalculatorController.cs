@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace AppDevTest.Controllers
 {
-	public class MvcHttpController : Controller
+	public class MvcCalculatorController : Controller
 	{
 		public ActionResult Index()
 		{

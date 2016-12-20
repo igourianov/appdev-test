@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace AppDevTest.Controllers
 {
-	public class SqlController : Controller
+	public class SqlQueriesController : Controller
 	{
 		public ActionResult Index()
 		{

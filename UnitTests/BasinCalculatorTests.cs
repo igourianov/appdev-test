@@ -16,7 +16,7 @@ namespace UnitTests
 		}
 
 		[TestMethod]
-		public void TestMethod1()
+		public void sample_test()
 		{
 			Assert.AreEqual(20, calc.GetVolume(new int[] { 3, 5, 8, 7, 2, 6, 11, 3, 4, 9, 5, 1 }));
 		}
