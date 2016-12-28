@@ -25,14 +25,14 @@ body > header::before {
 	position: absolute;
 	top: 10px;
 	left: 20px;
-	background: url(ceridian-logo.gif) no-repeat;
+	background: url(/content/ceridian-logo.gif) no-repeat;
 }
 
 body > nav {
 	margin: 0;
 	list-style: none;
 	overflow: auto;
-	background: #0d4c92 url(carbon_14.png);
+	background: #0d4c92 url(/content/carbon_14.png);
 }
 
 body > nav > * {

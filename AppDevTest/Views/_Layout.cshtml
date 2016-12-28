@@ -4,13 +4,14 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
 	<title>@ViewBag.Title - Ceridian APPDEV Test</title>
-	@Styles.Render("~/Content/css")
-	@Scripts.Render("~/bundles/modernizr")
+	@Styles.Render("~/static/css")
+	@Scripts.Render("~/static/modernizr")
 </head>
 <body>
 	<header></header>
 	<nav>
 		@{
+			var controller = ViewContext.RouteData.Values["controller"].ToString().ToLower();
 			var links = new[] {
 				new KeyValuePair<string, string>("Home", "Home"),
 				new KeyValuePair<string, string>("MvcCalculator", "MVC Calculator"),
@@ -23,13 +24,13 @@
 		}
 		@foreach (var link in links)
 		{
-			@Html.ActionLink(link.Value, "Index", link.Key, null, new { @class = ViewContext.RouteData.Values["controller"].ToString().ToLower() == link.Key.ToLower() ? "selected" : null })
+			@Html.ActionLink(link.Value, "Index", link.Key, null, new { @class = controller == link.Key.ToLower() ? "selected" : null })
 		}
 	</nav>
 	<article>
 		@RenderBody()
 	</article>
-	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/static/jquery")
 	@RenderSection("scripts", false)
 </body>
 </html>

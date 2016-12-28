@@ -52,7 +52,7 @@ ORDER BY FirstName + ' ' + LastName");
 			if (String.IsNullOrEmpty(sql))
 				return null;
 
-			using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
+			using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Northwind"].ConnectionString))
 			using (var adapter = new SqlDataAdapter(sql, conn))
 			{
 				var data = new DataTable();
