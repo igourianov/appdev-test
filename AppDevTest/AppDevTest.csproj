@@ -129,7 +129,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Business\BasinCalculator.cs" />
     <Compile Include="Business\NonRepeatingCharProvider.cs" />
-    <Compile Include="Controllers\CSharpAdvController.cs" />
     <Compile Include="Controllers\CSharpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FormDesignController.cs" />
@@ -177,7 +176,6 @@
     <Content Include="Views\SqlQueries\Table.cshtml" />
     <Content Include="Views\FormDesign\Index.cshtml" />
     <Content Include="Views\CSharp\Index.cshtml" />
-    <Content Include="Views\CSharpAdv\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
