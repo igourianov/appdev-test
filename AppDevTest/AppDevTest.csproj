@@ -127,7 +127,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Business\BasinCalculator.cs" />
     <Compile Include="Business\NonRepeatingCharProvider.cs" />
     <Compile Include="Controllers\CSharpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
