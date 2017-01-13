@@ -140,11 +140,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Northwind.mdf" />
     <Content Include="App_Data\northwind.sql" />
-    <Content Include="App_Data\Northwind_log.ldf">
-      <DependentUpon>Northwind.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\carbon_14.png" />
     <Content Include="Content\ceridian-logo.gif" />
     <Content Include="Content\form.css" />
@@ -152,6 +148,7 @@
     <Content Include="Content\normalize.css" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
+    <Content Include="App_Data\create_db.bat" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
