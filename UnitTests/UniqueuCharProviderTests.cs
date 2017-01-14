@@ -5,20 +5,20 @@ using AppDevTest.Business;
 namespace UnitTests
 {
 	[TestClass]
-	public class NonRepeatingCharProviderTests
+	public class UniqueCharProviderTests
 	{
-		private NonRepeatingCharProvider provider;
+		private UniqueCharProvider provider;
 
 		[TestInitialize]
 		public void Init()
 		{
-			provider = new NonRepeatingCharProvider();
+			provider = new UniqueCharProvider();
 		}
 
 		[TestMethod]
-		public void sample_test()
+		public void sample_string()
 		{
-			Assert.AreEqual(3, provider.FindFirst("accba"));
+			Assert.AreEqual(4, provider.FindFirst("abbacbda"));
 		}
 	}
 }

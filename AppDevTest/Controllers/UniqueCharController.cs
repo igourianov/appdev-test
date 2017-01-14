@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace AppDevTest.Controllers
 {
-	public class CSharpController : Controller
+	public class UniqueCharController : Controller
 	{
 		public ActionResult Index()
 		{

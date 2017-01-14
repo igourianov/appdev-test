@@ -127,8 +127,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Business\NonRepeatingCharProvider.cs" />
-    <Compile Include="Controllers\CSharpController.cs" />
+    <Compile Include="Business\UniqueCharProvider.cs" />
+    <Compile Include="Controllers\UniqueCharController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FormDesignController.cs" />
     <Compile Include="Controllers\JavascriptCalculatorController.cs" />
@@ -171,7 +171,7 @@
     <Content Include="Views\SqlQueries\Index.cshtml" />
     <Content Include="Views\SqlQueries\Table.cshtml" />
     <Content Include="Views\FormDesign\Index.cshtml" />
-    <Content Include="Views\CSharp\Index.cshtml" />
+    <Content Include="Views\UniqueChar\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

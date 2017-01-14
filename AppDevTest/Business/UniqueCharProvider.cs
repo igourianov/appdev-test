@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AppDevTest.Business
 {
-	public class NonRepeatingCharProvider
+	public class UniqueCharProvider
 	{
 		/// <summary>
 		/// Returns index of the first non-repeating character from the given string
