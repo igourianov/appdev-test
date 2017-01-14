@@ -5,12 +5,18 @@
 
 body {
 	min-height: 100%;
-	min-width: 800px;
-	width: 80%;
+	min-width: 400px;
 	margin: 0 auto;
 	font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
 	color: #232323;
 	background: #fff;
+}
+
+@media screen and (min-width:800px) {
+	body {
+		width: 80%;
+		min-width: 800px;
+	}
 }
 
 body > header {
