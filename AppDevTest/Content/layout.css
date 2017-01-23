@@ -42,7 +42,7 @@ body > nav {
 }
 
 body > nav > * {
-	padding: 5px 20px;
+	padding: .3em 1.2em;
 	margin: 0;
 	float: left;
 	border-right: 1px solid #fff;
@@ -61,6 +61,6 @@ body > nav > .selected {
 }
 
 body > article {
-	padding: 10px 20px;
+	padding: .6em 1.2em;
 	overflow: auto;
 }
