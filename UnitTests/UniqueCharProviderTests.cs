@@ -15,10 +15,16 @@ namespace UnitTests
 			provider = new UniqueCharProvider();
 		}
 
+		/*
 		[TestMethod]
 		public void sample_test()
 		{
-			//Assert.AreEqual(<expected result>, provider.FindFirst(<input string>));
+			Assert.AreEqual(<expected result>, provider.FindFirst(<input string>));
 		}
+		*/
+
+
+
+
 	}
 }
