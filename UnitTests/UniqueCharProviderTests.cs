@@ -18,7 +18,7 @@ namespace UnitTests
 		[TestMethod]
 		public void sample_test()
 		{
-			//Assert.AreEqual(<expected value>, <actual value>);
+			//Assert.AreEqual(<expected result>, provider.FindFirst(<input string>));
 		}
 	}
 }
