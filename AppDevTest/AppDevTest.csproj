@@ -152,8 +152,6 @@
     <Compile Include="Controllers\ProductRatingController.cs" />
     <Compile Include="Controllers\UniqueCharController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\FormDesignController.cs" />
-    <Compile Include="Controllers\JavascriptCalculatorController.cs" />
     <Compile Include="Controllers\MvcCalculatorController.cs" />
     <Compile Include="Controllers\SqlQueriesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -189,10 +187,8 @@
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\MvcCalculator\Index.cshtml" />
-    <Content Include="Views\JavascriptCalculator\Index.cshtml" />
     <Content Include="Views\SqlQueries\Index.cshtml" />
     <Content Include="Views\SqlQueries\Table.cshtml" />
-    <Content Include="Views\FormDesign\Index.cshtml" />
     <Content Include="Views\UniqueChar\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
