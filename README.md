@@ -15,6 +15,6 @@
 * Leave clean, readable code
 * Follow best coding practices
 * Show us you know how to use version control by creating meaningful, incremental commits
-* Be prepared to talk about what you did, how and why (code review) during in-peprson interview
+* Be prepared to talk about what you did, how and why during in-person interview (code review)
 
 # Good luck!
