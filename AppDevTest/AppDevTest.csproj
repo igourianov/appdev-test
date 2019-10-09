@@ -151,7 +151,6 @@
     <Compile Include="Business\UniqueCharProvider.cs" />
     <Compile Include="Controllers\ProductRatingController.cs" />
     <Compile Include="Controllers\UniqueCharController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MvcCalculatorController.cs" />
     <Compile Include="Controllers\SqlQueriesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -186,7 +185,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\MvcCalculator\Index.cshtml" />
     <Content Include="Views\SqlQueries\Index.cshtml" />
     <Content Include="Views\SqlQueries\Table.cshtml" />
