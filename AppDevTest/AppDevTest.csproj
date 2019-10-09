@@ -163,7 +163,7 @@
   <ItemGroup>
     <Content Include="App_Data\northwind.sql" />
     <Content Include="Content\carbon_14.png" />
-    <Content Include="Content\ceridian-logo.gif" />
+    <Content Include="Content\ceridian_wordmark_blue_footer.svg" />
     <Content Include="Content\form.css" />
     <Content Include="Content\layout.css" />
     <Content Include="Content\normalize.css" />

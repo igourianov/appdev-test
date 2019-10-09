@@ -19,19 +19,9 @@ body {
 	}
 }
 
-body > header {
-	height: 100px;
-	position: relative;
-}
-
-body > header::before {
-	content: " ";
-	height: 78px;
-	width: 400px;
-	position: absolute;
-	top: 10px;
-	left: 20px;
-	background: url(/content/ceridian-logo.gif) no-repeat;
+body > header > .ceridian-logo {
+	height: 70px;
+	margin: 0 2em;
 }
 
 body > nav {
