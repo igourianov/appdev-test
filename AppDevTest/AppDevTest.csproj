@@ -149,6 +149,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Business\UniqueCharProvider.cs" />
+    <Compile Include="Controllers\ProductRatingController.cs" />
     <Compile Include="Controllers\UniqueCharController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FormDesignController.cs" />
@@ -168,6 +169,7 @@
     <Content Include="Content\layout.css" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\site.css" />
+    <Content Include="Content\stars.png" />
     <Content Include="Global.asax" />
     <Content Include="App_Data\create_db.bat" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -198,6 +200,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ProductRating\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
