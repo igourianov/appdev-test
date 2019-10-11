@@ -14,17 +14,27 @@ namespace UnitTests
 		{
 			provider = new UniqueCharProvider();
 		}
-
-		/*
+        
 		[TestMethod]
 		public void sample_test()
 		{
-			Assert.AreEqual(<expected result>, provider.FindFirst(<input string>));
+			Assert.AreEqual(4, provider.FindFirst("abbacbda"));
 		}
-		*/
+
+        [TestMethod]
+        public void no_unique()
+        {
+            Assert.AreEqual(-1, provider.FindFirst("aaaaa"));
+        }
+
+        [TestMethod]
+        public void unique_not_until_end()
+        {
+            Assert.AreEqual(3, provider.FindFirst("aaab"));
+        }
 
 
 
 
-	}
+    }
 }
