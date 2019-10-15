@@ -1,4 +1,37 @@
-﻿code {
+﻿.star-filled {
+    background: url("../Content/star_filled.png");
+    width: 21px;
+    height: 20px;
+}
+
+.star-empty {
+    background: url("../Content/star_empty.png");
+    width: 21px;
+    height: 20px;
+}
+
+.base-rating div {
+    float:left;
+    overflow: hidden;
+    position:relative;
+}
+
+.base-rating {
+    position: fixed;
+}
+
+.rating {
+    position: fixed;
+    z-index: 999;
+}
+
+.rating div {
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+code {
 	font-size: .8em;
 	color: steelblue;
 	background-color: #eee;

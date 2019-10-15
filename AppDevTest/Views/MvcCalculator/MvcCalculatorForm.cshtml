@@ -1,0 +1,18 @@
+﻿@using AppDevTest.Models
+@model  AppDevTest.Models.MvcCalculatorModel
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    var Result = ViewBag.Result;
+    var Error = ViewBag.Error;
+
+    <p>
+        @Html.TextBoxFor(m => m.Value1, new { value = "" })
+        @Html.DropDownListFor(m => m.Operation, new SelectList(new string[] { "Plus", "Multiply", "Power" }, Model.Type))
+        @Html.TextBoxFor(m => m.Value2, new { value = "" })
+    </p>
+    <p>
+        Result: @Result @Error
+    </p>
+    <button type="submit">Calculate</button>
+}

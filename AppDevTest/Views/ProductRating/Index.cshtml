@@ -1,29 +1,101 @@
 ﻿@{
-	ViewBag.Title = "Product Rating";
+    ViewBag.Title = "Product Rating";
 }
 
 <p>Implement a 5 star product rating widget.</p>
 
 <ul>
-	<li>Make it look like Amazon or Ebay product rating (5 stars in a row)</li>
-	<li>Use following sprites: <img src="~/Content/star_empty.png" /> <img src="~/Content/star_filled.png" /></li>
-	<li>Initially display value of 3.33 / 5, so that 3 stars display filled and 4th star is 33% filled</li>
-	<li>
-		Make control change it's value on click
-		<ul>
-			<li>I.e. if user clicks on the second star, change display value to 2 / 5</li>
-			<li>No need to support partial star values for this</li>
-		</ul>
-	</li>
-	<li>You can use jQuery</li>
+    <li>Make it look like Amazon or Ebay product rating (5 stars in a row)</li>
+    <li>Use following sprites: <img src="~/Content/star_empty.png" /> <img src="~/Content/star_filled.png" /></li>
+    <li>Initially display value of 3.33 / 5, so that 3 stars display filled and 4th star is 33% filled</li>
+    <li>
+        Make control change it's value on click
+        <ul>
+            <li>I.e. if user clicks on the second star, change display value to 2 / 5</li>
+            <li>No need to support partial star values for this</li>
+        </ul>
+    </li>
+    <li>You can use jQuery</li>
 </ul>
 
 <hr />
 
 <p>Your implementation here</p>
+<div class="base-rating">
+</div>
+<div class="rating">
+</div>
 
 @section scripts {
-	<script>
+    <script>
+        const NUM_OF_STARS = 5;
+        const DEFAULT_FILL = 3.33; // DEFAULT_FILL must be <= NUM_OF_STARS.
+        const remainingFill = DEFAULT_FILL - Math.floor(DEFAULT_FILL);
 
-	</script>
+        $(this).ready(function () {
+            function fillStars(starsToFill) {
+
+                let curStarsFilled = 1;
+                // Fill stars before and up to clicked star.
+                for (curStarsFilled; curStarsFilled <= starsToFill; curStarsFilled++) {
+
+                    if ($("#star" + curStarsFilled).hasClass("partial-star")) {
+
+                        let width = $("#star" + curStarsFilled).width();
+                        $("#star" + curStarsFilled).css("width", (width / remainingFill));
+                        $("#star" + curStarsFilled).removeClass("partial-star");
+                    }
+
+                    $("#star" + curStarsFilled).show()
+                   
+                }
+
+
+                // Unfill stars after clicked star.
+                while (curStarsFilled <= NUM_OF_STARS) {
+                    $("#star" + curStarsFilled).hide()
+                    curStarsFilled++;
+                }
+            }
+
+            // Set click event for each star.
+            for (let curStar = 1; curStar <= NUM_OF_STARS; curStar++) {
+                $("#star" + curStar).click(function () {
+                    fillStars(curStar);
+                });
+
+                $("#base-star" + curStar).click(function () {
+                    fillStars(curStar);
+                });
+            }
+
+        });
+
+        /*
+         * [region] Startup
+         */
+
+        // Set filled and empty stars to page and overlap them.
+        for (let i = 1; i <= NUM_OF_STARS; i++) {
+
+            $(".base-rating").append("<div class='star-empty' id='" + "base-star" + i + "'></div>");
+            $(".rating").append("<div class='star-filled' id='" + "star" + i + "'></div>");
+
+            if (i > Math.ceil(DEFAULT_FILL)) {
+                $("#star" + i).hide();
+            }
+
+        }
+
+        // Partial Fill approrpriate star
+        let partialStar = Math.ceil(DEFAULT_FILL);
+        let width = $("#star" + partialStar).width();
+        $("#star" + partialStar).css("width", (width * remainingFill));
+        $("#star" + partialStar).addClass("partial-star");
+
+        /*
+         * [endregion] Startup
+         */
+
+    </script>
 }
