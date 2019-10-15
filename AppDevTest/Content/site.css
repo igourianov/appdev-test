@@ -1,4 +1,42 @@
-﻿code {
+﻿.star-filled {
+    background: url('../Content/star_filled.png');
+    width: 21px;
+    height: 20px;
+}
+
+.star {
+    background-image: url('../Content/star_empty.png');
+    width: 21px;
+    height: 20px;
+}
+
+#empty-star-box {
+    position: fixed;
+}
+
+#star-box {
+    position: fixed;
+}
+
+#star-box {
+    z-index: 999;
+}
+
+ul#star-box li {
+    float: left;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+}
+
+ul#empty-star-box li {
+    float: left;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+}
+
+code {
 	font-size: .8em;
 	color: steelblue;
 	background-color: #eee;
